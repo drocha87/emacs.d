@@ -1,0 +1,10 @@
+/auto-save-list/
+/eln-cache/
+/elpa/
+/history
+/projects
+/tramp
+/transient/
+/var/
+/eshell/
+*.elc
