@@ -8,3 +8,4 @@
 /var/
 /eshell/
 *.elc
+/tree-sitter/

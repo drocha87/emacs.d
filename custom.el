@@ -4,10 +4,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(connection-local-criteria-alist
-	 '(((:application tramp)
+	 '(((:application eshell)
+			eshell-connection-default-profile)
+		 ((:application tramp)
 			tramp-connection-local-default-system-profile tramp-connection-local-default-shell-profile)))
  '(connection-local-profile-alist
-	 '((tramp-connection-local-darwin-ps-profile
+	 '((eshell-connection-default-profile
+			(eshell-path-env-list))
+		 (tramp-connection-local-darwin-ps-profile
 			(tramp-process-attributes-ps-args "-acxww" "-o" "pid,uid,user,gid,comm=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" "-o" "state=abcde" "-o" "ppid,pgid,sess,tty,tpgid,minflt,majflt,time,pri,nice,vsz,rss,etime,pcpu,pmem,args")
 			(tramp-process-attributes-ps-format
 			 (pid . number)
@@ -79,13 +83,15 @@
 		 (tramp-connection-local-default-system-profile
 			(path-separator . ":")
 			(null-device . "/dev/null"))))
+ '(custom-safe-themes
+	 '("159a29ab0ec5ba4e2811eddd9756aa779b23467723dcbdd223929fbf2dde8954" "841b6a0350ae5029d6410d27cc036b9f35d3bf657de1c08af0b7cbe3974d19ac" "263e3a9286c7ab0c4f57f5d537033c8a5943e69d142e747723181ab9b12a5855" "4594d6b9753691142f02e67b8eb0fda7d12f6cc9f1299a49b819312d6addad1d" default))
  '(delete-selection-mode 1)
  '(global-hl-line-mode t)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-	 '(jinx corfu-prescient corfu company-prescient vertico-prescient prescient consult ef-themes emmet-mode no-littering which-key web-mode vertico orderless multiple-cursors move-text marginalia magit helm expand-region doom-themes crux company apheleia))
+	 '(hl-todo company-ctags markdown-mode jinx corfu-prescient corfu company-prescient vertico-prescient prescient consult ef-themes emmet-mode no-littering which-key web-mode vertico orderless multiple-cursors move-text marginalia magit helm expand-region doom-themes crux company apheleia))
  '(ring-bell-function #'ignore)
  '(scroll-bar-mode nil)
  '(tab-bar-show nil)

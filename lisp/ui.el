@@ -10,7 +10,7 @@
  '(delete-selection-mode 1)
  '(tab-bar-show nil))
 
-(set-face-attribute 'default nil :font "Jetbrains Mono" :height 120)
+(set-face-attribute 'default nil :font "Jetbrains Mono" :height 130)
 
 (dolist (var '(default-frame-alist initial-frame-alist))
   (add-to-list var '(width . (text-pixels . 1200)))
