@@ -84,14 +84,14 @@
 			(path-separator . ":")
 			(null-device . "/dev/null"))))
  '(custom-safe-themes
-	 '("159a29ab0ec5ba4e2811eddd9756aa779b23467723dcbdd223929fbf2dde8954" "841b6a0350ae5029d6410d27cc036b9f35d3bf657de1c08af0b7cbe3974d19ac" "263e3a9286c7ab0c4f57f5d537033c8a5943e69d142e747723181ab9b12a5855" "4594d6b9753691142f02e67b8eb0fda7d12f6cc9f1299a49b819312d6addad1d" default))
+	 '("e27c9668d7eddf75373fa6b07475ae2d6892185f07ebed037eedf783318761d7" "774899edc1fab6a5d93025126c4cd1c7c183c3fd0809f5a88d4a686bd6784662" "159a29ab0ec5ba4e2811eddd9756aa779b23467723dcbdd223929fbf2dde8954" "841b6a0350ae5029d6410d27cc036b9f35d3bf657de1c08af0b7cbe3974d19ac" "263e3a9286c7ab0c4f57f5d537033c8a5943e69d142e747723181ab9b12a5855" "4594d6b9753691142f02e67b8eb0fda7d12f6cc9f1299a49b819312d6addad1d" default))
  '(delete-selection-mode 1)
  '(global-hl-line-mode t)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-	 '(hl-todo company-ctags markdown-mode jinx corfu-prescient corfu company-prescient vertico-prescient prescient consult ef-themes emmet-mode no-littering which-key web-mode vertico orderless multiple-cursors move-text marginalia magit helm expand-region doom-themes crux company apheleia))
+	 '(nginx-mode caser gruber-darker-theme hl-todo company-ctags markdown-mode jinx corfu-prescient corfu company-prescient vertico-prescient prescient consult ef-themes emmet-mode no-littering which-key web-mode vertico orderless multiple-cursors move-text marginalia magit helm expand-region doom-themes crux company apheleia))
  '(ring-bell-function #'ignore)
  '(scroll-bar-mode nil)
  '(tab-bar-show nil)

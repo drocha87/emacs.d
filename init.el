@@ -1,5 +1,8 @@
-(load-theme 'ef-duo-light t)
+;; (load-theme 'ef-duo-light t)
 ;; (load-theme 'ef-elea-dark t)
+;; (load-theme 'kanagawa t)
+;; (load-theme 'gruber-darker t)
+(load-theme 'zenburn t)
 
 (setq-default tab-width 2)
 

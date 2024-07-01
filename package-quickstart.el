@@ -966,6 +966,34 @@ See info node `(transient)Modifying Existing Transients'.
 
 
 )
+(let ((load-true-file-name "/home/drocha/.emacs.d/elpa/nginx-mode-20240412.402/nginx-mode-autoloads.el")(load-file-name "/home/drocha/.emacs.d/elpa/nginx-mode-20240412.402/nginx-mode-autoloads.el"))
+
+
+
+(add-to-list 'load-path (or (and load-file-name (directory-file-name (file-name-directory load-file-name))) (car load-path)))
+
+
+
+
+(autoload 'nginx-mode "nginx-mode" "\
+Major mode for highlighting nginx config files.
+
+The variable nginx-indent-level controls the amount of indentation.
+\\{nginx-mode-map}
+
+(fn)" t)
+(add-to-list 'auto-mode-alist '("nginx\\.conf\\'" . nginx-mode))
+(add-to-list 'auto-mode-alist '("/nginx/.+\\.conf\\'" . nginx-mode))
+(add-to-list 'magic-fallback-mode-alist '("\\(?:.*
+\\)*\\(?:http\\|server\\|location .+\\|upstream .+\\)[ 
+	]+{" . nginx-mode))
+(register-definition-prefixes "nginx-mode" '("nginx-"))
+
+
+(provide 'nginx-mode-autoloads)
+
+
+)
 (let ((load-true-file-name "/home/drocha/.emacs.d/elpa/move-text-20231204.1514/move-text-autoloads.el")(load-file-name "/home/drocha/.emacs.d/elpa/move-text-20231204.1514/move-text-autoloads.el"))
 
 
@@ -3723,6 +3751,23 @@ An error is shown when no current theme is available.
 
 
 )
+(let ((load-true-file-name "/home/drocha/.emacs.d/elpa/gruber-darker-theme-20231026.2031/gruber-darker-theme-autoloads.el")(load-file-name "/home/drocha/.emacs.d/elpa/gruber-darker-theme-20231026.2031/gruber-darker-theme-autoloads.el"))
+
+
+
+(add-to-list 'load-path (or (and load-file-name (directory-file-name (file-name-directory load-file-name))) (car load-path)))
+
+
+
+
+(when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
+(register-definition-prefixes "gruber-darker-theme" '("gruber-darker"))
+
+
+(provide 'gruber-darker-theme-autoloads)
+
+
+)
 (let ((load-true-file-name "/home/drocha/.emacs.d/elpa/go-mode-20230823.2304/go-mode-autoloads.el")(load-file-name "/home/drocha/.emacs.d/elpa/go-mode-20230823.2304/go-mode-autoloads.el"))
 
 
@@ -5832,6 +5877,82 @@ Set up `company-backends'.")
 
 
 )
+(let ((load-true-file-name "/home/drocha/.emacs.d/elpa/caser-20230901.526/caser-autoloads.el")(load-file-name "/home/drocha/.emacs.d/elpa/caser-20230901.526/caser-autoloads.el"))
+
+
+
+(add-to-list 'load-path (or (and load-file-name (directory-file-name (file-name-directory load-file-name))) (car load-path)))
+
+
+
+
+(autoload 'caser-camelcase-dwim "caser" "\
+Camelcase words in the region, if active; if not, camelcase word at point.
+
+This converts it from dash-case or snake_case to camelCase.
+
+If the region is active, this function calls `caser-camelcase-region'.
+Otherwise, it calls `caser-camelcase-word', with prefix argument passed to it
+to camelcase ARG words.
+
+(fn ARG)" t)
+(autoload 'caser-snakecase-dwim "caser" "\
+Snakecase words in the region, if active; if not, snakecase word at point.
+
+This converts it from camelCase or dash-case to snake_case.
+
+If the region is active, this function calls `caser-snakecase-region'.
+Otherwise, it calls `caser-snakecase-word', with prefix argument passed to it
+to snakecase ARG words.
+
+(fn ARG)" t)
+(autoload 'caser-dashcase-dwim "caser" "\
+Dashcase words in the region, if active; if not, dashcase word at point.
+
+This converts it from camelCase or snake_case to dash-case.
+
+If the region is active, this function calls `caser-dashcase-region'.
+Otherwise, it calls `caser-dashcase-word', with prefix argument passed to it
+to dashcase ARG words.
+
+(fn ARG)" t)
+(autoload 'caser-dashcase-from-space-dwim "caser" "\
+Dashcase what you mean, including converting spaces to dashes.
+
+If the region is active, dashcase it; otherwise dashcase the word at point.
+
+This converts it from camelCase or snake_case to dash-case.
+
+If the region is active, this function calls `caser-dashcase-region'.
+Otherwise, it calls `caser-dashcase-word', with prefix argument passed to it
+to dashcase WORDS words.
+
+(fn &optional WORDS)" t)
+(autoload 'caser-snakecase-from-space-dwim "caser" "\
+Snakecase what you mean, including converting spaces to underscores.
+
+If the region is active, snakecase it; otherwise snakecase WORDS
+words at point, defaulting to 1.
+
+This converts it from camelCase or dash-case to snake_case.
+
+(fn &optional WORDS)" t)
+(autoload 'caser-camelcase-from-space-dwim "caser" "\
+Camelcase what you mean, including converting spaces to underscores.
+
+If the region is active, camelcase it; otherwise camelcase WORDS
+words at point, defaulting to 1.
+
+This converts it from snake_case or dash-case to camelCase.
+
+(fn &optional WORDS)" t)
+(register-definition-prefixes "caser" '("caser-"))
+
+
+(provide 'caser-autoloads)
+
+
+)
 (let ((load-true-file-name "/home/drocha/.emacs.d/elpa/apheleia-20240413.2257/apheleia-autoloads.el")(load-file-name "/home/drocha/.emacs.d/elpa/apheleia-20240413.2257/apheleia-autoloads.el"))
 
 
@@ -5931,7 +6052,7 @@ Go to the most recently reported formatter error message." t)
 (setq package-activated-list
 			(delete-dups
 			 (append
-				'(zenburn-theme compat with-editor which-key web-mode prescient vertico vertico-prescient typescript-mode treesit-auto transient move-text markdown-mode marginalia dash magit-section git-commit magit kanagawa-theme jinx hl-todo autothemer gruvbox-theme go-mode expand-region emmet-mode ef-themes dracula-theme doom-themes deno-ts-mode crux corfu corfu-prescient consult company company-ctags apheleia)
+				'(zenburn-theme compat with-editor which-key web-mode prescient vertico vertico-prescient typescript-mode treesit-auto transient nginx-mode move-text markdown-mode marginalia dash magit-section git-commit magit kanagawa-theme jinx hl-todo autothemer gruvbox-theme gruber-darker-theme go-mode expand-region emmet-mode ef-themes dracula-theme doom-themes deno-ts-mode crux corfu corfu-prescient consult company company-ctags caser apheleia)
 				package-activated-list)))
 (progn
 	(require 'info)

@@ -1,5 +1,6 @@
 (global-set-key [C-backspace] 'drocha/backward-kill-word)
 (global-set-key [C-delete] 'drocha/forward-kill-word)
+(global-set-key (kbd "C-j") 'delete-indentation)
 
 (with-eval-after-load 'eglot
 	(progn
