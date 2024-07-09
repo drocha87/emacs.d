@@ -10,14 +10,14 @@
  '(delete-selection-mode 1)
  '(tab-bar-show nil))
 
-(set-face-attribute 'default nil :font "Jetbrains Mono" :height 130)
+(set-face-attribute 'default nil :font "Jetbrains Mono" :height 140)
 
 (dolist (var '(default-frame-alist initial-frame-alist))
-  (add-to-list var '(width . (text-pixels . 1200)))
-  (add-to-list var '(height . (text-pixels . 900))))
+	(add-to-list var '(width . (text-pixels . 1200)))
+	(add-to-list var '(height . (text-pixels . 900))))
 
 (setq frame-resize-pixelwise t
-      frame-inhibit-implied-resize t)
+			frame-inhibit-implied-resize t)
 
 (global-display-line-numbers-mode 1)
 

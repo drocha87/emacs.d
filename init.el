@@ -26,6 +26,7 @@
 	(setq enable-recursive-minibuffers t))
 
 (require 'eglot)
+(require 'ui)
 (require 'completion)
 (require 'packages)
 (require 'web)
