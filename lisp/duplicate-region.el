@@ -55,7 +55,6 @@
 
 ;;; Code:
 
-
 (defun duplicate-region-above()
   "Duplicate the selected region above the cursor."
   (interactive) (duplicate-region "above"))
@@ -112,8 +111,6 @@
   (global-unset-key [S-M-up])
   (global-set-key [S-M-down] 'duplicate-region-below)
   (global-set-key [S-M-up]   'duplicate-region-above))
-
-
 
 (provide 'duplicate-region)
 ;;; duplicate-region.el ends here
