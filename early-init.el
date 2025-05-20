@@ -1,3 +1,6 @@
+(set-selection-coding-system 'utf-8)
+(set-clipboard-coding-system 'utf-8)
+
 (setq load-path (cons (concat user-emacs-directory "lisp") load-path))
 
 ;; Emacs adds `custom' settings in the init file by default. Run this file

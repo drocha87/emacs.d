@@ -1,5 +1,4 @@
 ;; -*- lexical-binding: t -*-
-
 (setq frame-resize-pixelwise t
       frame-inhibit-implied-resize t
       frame-title-format '("%b")
@@ -21,12 +20,7 @@
 (global-hl-line-mode 1)
 (delete-selection-mode 1)
 
-(set-face-attribute 'default nil :font "Ubuntu Mono" :height 150)
-;;(set-face-attribute 'default nil :font "Iosevka" :height 160)
-
-(dolist (var '(default-frame-alist initial-frame-alist))
-  (add-to-list var '(width . (text-pixels . 1200)))
-  (add-to-list var '(height . (text-pixels . 900))))
+(set-face-attribute 'default nil :font "Jetbrains Mono" :height 150)
 
 (use-package which-key
   :ensure t
@@ -36,7 +30,6 @@
 ;; THEMES
 (use-package leuven-theme :ensure t)
 (use-package ef-themes :ensure t)
-
 (load-theme 'ef-eagle t)
 
 ;;; General window and buffer configurations
@@ -221,6 +214,7 @@
   :init
   (vertico-mode)
   (vertico-multiform-mode))
+;;
 
 (use-package prescient
   :ensure t)
@@ -421,6 +415,7 @@
   ;; (setq web-mode-enable-auto-indentation nil)
   (setq web-mode-enable-css-colorization t)
   (setq web-mode-script-padding 2)
+  (setq web-mode-enable-front-matter-block t)
   ;; (setq web-mode-enable-block-face t)
   (setq web-mode-enable-comment-keywords t)
   ;; (setq web-mode-enable-heredoc-fontification t)
@@ -428,7 +423,9 @@
 
   (advice-add 'web-mode-make-tag-overlays :after #'drocha/web-mode-current-element-highlight-face-remap)
   (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.svelte\\'" . web-mode)))
+  (add-to-list 'auto-mode-alist '("\\.liquid\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.svelte\\'" . web-mode))
+  (setq web-mode-engines-alist '(("go"    . "\\.html\\'"))))
 
 (add-to-list 'auto-mode-alist '("\\.ts?\\'" . typescript-ts-mode))
 
